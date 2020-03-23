@@ -42,7 +42,19 @@ Expected OUTPUT for this sample
 
 */
 
+/*For each element (object) of the input `foods` array, the corresponding element in the
+  output array can be computed this way:
+    * "FOOD is suitable for vegetarians" if the `isVegetarian` attribute is true
+    * "FOOD is not suitable for vegetarians" if the `isVegetarian` attribute is false
+    (replace FOOD with the `food` attribute)*/
+
 function getFoodCategories(foods) {
+  return foods.map(foods => {
+    if (foods.isVegetarian == true) {
+      return `${foods.food} is suitable for vegetarians`
+    } else { 
+      return `${foods.food} is not suitable for vegetarians`} 
+  })
 }
 
 
